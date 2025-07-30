@@ -83,7 +83,7 @@ resource "docker_container" "nginx" {
 
 ![hw_01](https://github.com/Qshar1408/hw_01/blob/main/img/hw_01_006.png)
 
-#### Файл terraform.tfstate: [terraform.tfstate](https://github.com/Qshar1408/hw_01/blob/main/files/terraform.tfstate)
+#### Файл terraform.tfstate: [terraform.tfstate](https://github.com/Qshar1408/hw_01/blob/main/terraform.tfstate)
 
 8. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ **ОБЯЗАТЕЛЬНО НАЙДИТЕ В ПРЕДОСТАВЛЕННОМ КОДЕ**, а затем **ОБЯЗАТЕЛЬНО ПОДКРЕПИТЕ** строчкой из документации [**terraform провайдера docker**](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs).  (ищите в классификаторе resource docker_image )
 
