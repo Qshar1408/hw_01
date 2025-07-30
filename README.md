@@ -73,9 +73,17 @@ resource "docker_container" "nginx" {
 6. Замените имя docker-контейнера в блоке кода на ```hello_world```. Не перепутайте имя контейнера и имя образа. Мы всё ещё продолжаем использовать name = "nginx:latest". Выполните команду ```terraform apply -auto-approve```.
 Объясните своими словами, в чём может быть опасность применения ключа  ```-auto-approve```. Догадайтесь или нагуглите зачем может пригодиться данный ключ? В качестве ответа дополнительно приложите вывод команды ```docker ps```.
 
+#### Опасность применения ключа -auto-approve заключается в том, изменений не потребуют согласия, т.е. всё выполнится автоматически. При таком подходе, если в коде были ошибки, то они могут привести к плачевным последствиям.
+
+![hw_01](https://github.com/Qshar1408/hw_01/blob/main/img/hw_01_004.png)
+
+![hw_01](https://github.com/Qshar1408/hw_01/blob/main/img/hw_01_005.png)
 
 7. Уничтожьте созданные ресурсы с помощью **terraform**. Убедитесь, что все ресурсы удалены. Приложите содержимое файла **terraform.tfstate**.
 
+![hw_01](https://github.com/Qshar1408/hw_01/blob/main/img/hw_01_006.png)
+
+#### Файл terraform.tfstate: [terraform.tfstate](https://github.com/Qshar1408/hw_01/blob/main/files/terraform.tfstate)
 
 8. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ **ОБЯЗАТЕЛЬНО НАЙДИТЕ В ПРЕДОСТАВЛЕННОМ КОДЕ**, а затем **ОБЯЗАТЕЛЬНО ПОДКРЕПИТЕ** строчкой из документации [**terraform провайдера docker**](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs).  (ищите в классификаторе resource docker_image )
 
